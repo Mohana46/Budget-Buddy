@@ -39,7 +39,7 @@ const DoughnutChart = ({ userId }) => {
         const fetchCategoryExpenses = async () => {
             const token = localStorage.getItem('authToken');
             try {
-                const response = await axios.get(`http://localhost:8080/api/expenses/getAll?userId=${userId}`, {
+                const response = await axios.get(`https://budget-buddy-gho3.onrender.com/api/expenses/getAll?userId=${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -58,7 +58,7 @@ const DoughnutChart = ({ userId }) => {
 
                     expenses.forEach((expense) => {
                         if (expense.type === 'Expense') {
-                            const category = expense.category; // Assuming the expense has a 'category' field
+                            const category = expense.category; 
                             if (categoryExpenses.hasOwnProperty(category)) {
                                 categoryExpenses[category] += expense.amount;
                             }
