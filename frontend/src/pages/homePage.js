@@ -26,7 +26,7 @@ const HomePage = () => {
       const token = localStorage.getItem('authToken');
       if (token) {
         try {
-          const response = await axios.get('http://localhost:8080/api/users/current', {
+          const response = await axios.get('https://budget-buddy-gho3.onrender.com/api/users/current', {
             headers: {
               Authorization: `Bearer ${token}`
             }
