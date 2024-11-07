@@ -16,7 +16,7 @@ const Table = ({ userId }) => {
     const fetchTransactions = async () => {
       const token = localStorage.getItem('authToken');
       try {
-        const response = await axios.get(`http://localhost:8080/api/expenses/getAll?userId=${userId}`, {
+        const response = await axios.get(`https://budget-buddy-gho3.onrender.com/api/expenses/getAll?userId=${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -60,7 +60,7 @@ const Table = ({ userId }) => {
   const handleDelete = async (id) => {
     const token = localStorage.getItem('authToken');
     try {
-      const response = await axios.delete(`http://localhost:8080/api/expenses/delete/${id}`, {
+      const response = await axios.delete(`https://budget-buddy-gho3.onrender.com/api/expenses/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -94,7 +94,7 @@ const Table = ({ userId }) => {
               selected={startDate}
               onChange={date => {
                 setStartDate(date);
-                if (endDate && date > endDate) setEndDate(null); // Reset end date if it's before the new start date
+                if (endDate && date > endDate) setEndDate(null); 
               }}
               placeholderText="Select Start Date"
               customInput={
