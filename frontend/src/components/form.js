@@ -30,14 +30,14 @@ const ExpenseForm = ({ handleClose, userId }) => {
       }
 
       const response = await axios.post(
-        'http://localhost:8080/api/expenses/add',
+        'https://budget-buddy-gho3.onrender.com/api/expenses/add',
         {
           ...formData,
           userId,
         },
         {
           headers: {
-            Authorization: `Bearer ${token}`, // Include the token in the headers
+            Authorization: `Bearer ${token}`, 
           },
         }
       );
