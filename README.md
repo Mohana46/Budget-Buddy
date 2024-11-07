@@ -22,7 +22,7 @@
 
 You can view a live demo of the BudgetBuddy app here:
 
-[BudgetBuddy Demo](https://budget-buddy-46.netlify.app/)
+[BudgetBuddy](https://budget-buddy-livid.vercel.app/)
 
 
 
