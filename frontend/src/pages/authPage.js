@@ -23,7 +23,7 @@ const AuthPage = () => {
   };
 
   const onSubmit = async (data) => {
-    const url = isSignUp ? 'http://localhost:8080/api/users/register' : 'http://localhost:8080/api/users/login';
+    const url = isSignUp ? 'https://budget-buddy-gho3.onrender.com/api/users/register' : 'https://budget-buddy-gho3.onrender.com/api/users/login';
     setLoading(true);
     try {
       const response = await axios.post(url, data);
